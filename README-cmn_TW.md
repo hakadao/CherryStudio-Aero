@@ -269,4 +269,14 @@ body[theme-mode='dark'][os='windows'] {
 .markdown [class^='Container'] [class^='Header']+[class^='Content'] {
   background: transparent;
 }
+
+/* https://github.com/hakadao/CherryStudio-Aero/issues/19 */
+.message-assistant > *:has(+ .message-content-container) > *:hover {
+  background: color-mix(in srgb, var(--aero-background-solid) 60%, transparent) !important;
+  backdrop-filter: blur(40px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
+  isolation: isolate !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 10px !important;
+}
 ```
