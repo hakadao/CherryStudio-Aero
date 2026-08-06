@@ -115,7 +115,13 @@ body[theme-mode='dark'] [class^='ant'] {
   background-color: transparent !important;
 }
 
-#inputbar,
+/* Keep Cherry Studio 2.0's floating prompt editor legible over conversation text */
+#inputbar {
+  background-color: var(--aero-background-3);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  backdrop-filter: blur(24px) saturate(140%);
+}
+
 .system-prompt,
 [class^='CardContent'] {
   background-color: var(--fill-1);
